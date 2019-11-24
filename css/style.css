@@ -1,0 +1,305 @@
+@charset "UTF-8";
+html, body {
+  width: 100%;
+  height: 100%;
+  background: #7891a7;
+  margin: 0; }
+
+*, :before, :after {
+  position: absolute;
+  content: '';
+  box-sizing: border-box; }
+
+.boba {
+  font-size: 3vmin;
+  width: 26em;
+  height: 33em;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, 10%); }
+
+.capacete {
+  width: 17.5em;
+  height: 8em;
+  top: 6.8em;
+  left: 4.25em;
+  background: #455e49;
+  border-top-left-radius: 45% 100%;
+  border-top-right-radius: 45% 100%;
+  border-bottom-right-radius: 0% 0%;
+  border-bottom-left-radius: 0% 0%; }
+  .capacete:before {
+    content: '◀︎▶︎';
+    font-size: 1em;
+    line-height: 1;
+    left: 50%;
+    transform-origin: 50% 100%;
+    transform: translate(-50%) scaleX(1.8) scaleY(0.8);
+    bottom: .2em;
+    color: #2f4132; }
+  .capacete:after {
+    width: .4em;
+    height: 2em;
+    background: #f3bd29;
+    right: 2em;
+    bottom: .5em;
+    transform-origin: 0 100%;
+    transform: perspective(50em) rotateY(45deg) rotateX(10deg) skewY(-4deg);
+    box-shadow: 0.8em 0 0 #f3bd29, 1.6em 0 0 #f3bd29, 2.4em 0 0 #f3bd29; }
+  .capacete .dent {
+    width: 3.8em;
+    height: 4.4em;
+    background: black;
+    border-radius: 50%;
+    left: 11.3em;
+    top: 1em;
+    transform: rotateX(-40deg);
+    filter: contrast(300);
+    mix-blend-mode: screen;
+    opacity: .6; }
+    .capacete .dent:before {
+      width: 1.8em;
+      height: 2.4em;
+      background: white;
+      border-radius: 50%;
+      filter: blur(0.2em);
+      left: 1em;
+      top: 1em; }
+    .capacete .dent:after {
+      width: 1em;
+      height: 1em;
+      background: white;
+      border-radius: 50%;
+      top: 1.8em;
+      left: .6em;
+      box-shadow: 0.2em -1.1em 0 -0.2em #fff, -0.3em -0.7em 0 -0.3em #fff;
+      filter: blur(0.15em); }
+
+.mascara {
+  height: 14.25em;
+  width: 18em;
+  top: 14.75em;
+  left: 4em;
+  overflow: hidden;
+  border-radius: .15em .15em 0 0;
+  transform: perspective(20em) rotateX(10deg);
+  transform-origin: 50% 0; }
+  .mascara .esquerda, .mascara .direita {
+    background: #781f1b;
+    width: 7em;
+    height: 15em;
+    bottom: 0;
+    transform-origin: 100% 100%;
+    transform: skewY(27deg);
+    overflow: hidden; }
+  .mascara .esquerda {
+    left: -1px; }
+  .mascara .direita {
+    right: -1px;
+    transform-origin: 0 100%;
+    transform: skewY(-27deg); }
+  .mascara .bochecha {
+    width: 6.5em;
+    height: 8.5em;
+    background: #1a231b;
+    top: 7em; }
+    .mascara .bochecha:before {
+      width: 5.5em;
+      height: 12em;
+      background: #455e49;
+      top: 1.8em;
+      border-radius: 50%; }
+  .mascara .esquerda .bochecha {
+    border-top-right-radius: 65% 60%;
+    border-top-left-radius: 2em 1.2em;
+    right: .75em; }
+    .mascara .esquerda .bochecha:before {
+      right: 0;
+      transform-origin: 100% 50%;
+      transform: skewX(-4deg); }
+    .mascara .esquerda .bochecha:after {
+      width: .75em;
+      height: .75em;
+      background: #888;
+      border-radius: 50%;
+      right: .7em;
+      top: 4.8em; }
+  .mascara .direita .bochecha {
+    border-top-left-radius: 65% 60%;
+    border-top-right-radius: 2em 1.2em;
+    left: .75em; }
+    .mascara .direita .bochecha:before {
+      left: 0;
+      transform-origin: 0 50%;
+      transform: skewX(4deg); }
+  .mascara .visor {
+    background: #000;
+    background: linear-gradient(130deg, black 19.5%, #333 20.3%, #333 29.6%, black 30.5%, black 50%, #333 50.3%, #333 29.6%, black 30.5%, black 50%, #333 50.3%, #333 54%, black 54.3%, black 56%, #333 56.3%, #333 57%, black 57.3%);
+    width: 5.5em;
+    height: 14.2em;
+    left: 6.25em;
+    border-color: #781f1b;
+    border-style: solid;
+    border-top-width: 1.5em;
+    border-left-width: .75em;
+    border-right-width: .75em;
+    border-bottom-width: 0;
+    border-bottom-left-radius: 0.8em 0.3em;
+    border-bottom-right-radius: 0.8em 0.3em; }
+    .mascara .visor .eyeslit {
+      width: 22em;
+      height: 9em;
+      background: #000;
+      background: linear-gradient(130deg, black 61%, #333 61%, #333 66.1%, black 66.1%);
+      top: -7.25em;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 50%; }
+      .mascara .visor .eyeslit:before {
+        width: 38em;
+        height: 9em;
+        background: #781f1b;
+        bottom: 1.8em;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 50%; }
+      .mascara .visor .eyeslit:after {
+        width: 38em;
+        height: 6em;
+        background: #455e49;
+        bottom: 2.9em;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 50%; }
+    .mascara .visor:before, .mascara .visor:after {
+      width: 2em;
+      height: 2em;
+      background: #455e49;
+      z-index: 1;
+      transform: skewX(14deg);
+      left: -8.4em;
+      top: -1em; }
+    .mascara .visor:after {
+      transform: skewX(-14deg);
+      right: -8.4em;
+      left: auto; }
+
+.orelha-direita {
+  width: .7em;
+  height: 10.4em;
+  background: #2f4132;
+  background: linear-gradient(to bottom, silver 23%, #2f4132 23%);
+  right: 2.5em;
+  top: 15em;
+  transform-origin: 0 100%;
+  transform: rotate(-4.4deg);
+  border-top-right-radius: 100% 2em; }
+  .orelha-direita:before {
+    border-top: 0.5em solid #455e49;
+    border-left: 0.35em solid #455e49;
+    border-right: .35em solid transparent;
+    border-bottom: .5em solid transparent;
+    bottom: -1em; }
+  .orelha-direita:after {
+    width: .2em;
+    height: 10.6em;
+    top: -.2em;
+    background: #455e49;
+    border-top-right-radius: .2em; }
+
+.orelha-esquerda {
+  width: 1em;
+  background: #c4930b;
+  height: 10.4em;
+  left: 2.2em;
+  top: 15em;
+  transform-origin: 100% 100%;
+  transform: rotate(4.4deg); }
+  .orelha-esquerda:before {
+    border-top: 0.5em soldi #f3bd29;
+    border-left: .5em solid transparent;
+    border-right: 0.5em solid #f3bd29;
+    border-bottom: .5em solid transparent;
+    bottom: -1em; }
+  .orelha-esquerda:after {
+    width: .2em;
+    height: 10.6em;
+    top: 0;
+    right: 0;
+    background: #f3bd29; }
+  .orelha-esquerda .escopo {
+    width: 2em;
+    height: 5.5em;
+    top: -2em;
+    z-index: 1;
+    transform-origin: 0 100%;
+    transform: rotate(-2deg);
+    background: #f3bd29;
+    border-top-left-radius: .3em; }
+    .orelha-esquerda .escopo:after {
+      width: 2em;
+      height: 2.5em;
+      background: silver;
+      top: 4.8em;
+      transform-origin: 0 0;
+      transform: rotate(2.4deg); }
+    .orelha-esquerda .escopo .montagem {
+      width: .55em;
+      height: 4.65em;
+      left: -.5em;
+      top: .4em;
+      background: #c4930b;
+      border-top-left-radius: .5em 2em;
+      border-bottom: 0.5em solid #f3bd29; }
+      .orelha-esquerda .escopo .montagem:after {
+        border: .6em solid transparent;
+        border-top-color: silver;
+        border-left-color: silver;
+        bottom: -1.45em;
+        z-index: 1; }
+    .orelha-esquerda .escopo .post {
+      width: .5em;
+      height: 12em;
+      background: silver;
+      bottom: 2.5em;
+      left: .5em; }
+      .orelha-esquerda .escopo .post .olho {
+        width: 2em;
+        height: 2em;
+        background: black;
+        top: -1.8em;
+        left: -.15em;
+        transform-origin: 0 100%;
+        transform: rotate(5deg); }
+        .orelha-esquerda .escopo .post .olho:before {
+          left: -.78em;
+          border-top: .4em solid transparent;
+          border-right: .8em solid black;
+          border-bottom: 1.6em solid transparent; }
+        .orelha-esquerda .escopo .post .olho:after {
+          width: 1.6em;
+          height: 0.3em;
+          background: #777;
+          left: 1.9em;
+          top: 1.4em; }
+        .orelha-esquerda .escopo .post .olho span {
+          width: 4em;
+          height: 2em;
+          left: .6em;
+          overflow: hidden; }
+          .orelha-esquerda .escopo .post .olho span:before {
+            width: 4.5em;
+            height: 4.5em;
+            border-radius: 50%;
+            background: silver;
+            bottom: 0.5em;
+            right: -.25em; }
+          .orelha-esquerda .escopo .post .olho span:after {
+            width: 20em;
+            height: 20em;
+            border-radius: 50%;
+            left: -5em;
+            top: .6em;
+            box-shadow: 0 0 0 2em black; }
+
+/*# sourceMappingURL=style.css.map */

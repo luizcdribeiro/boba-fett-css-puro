@@ -1,0 +1,352 @@
+$green: #455e49;
+$red: #781f1b;
+$background: #7891a7;
+$gold: #f3bd29;
+
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background: $background;
+  margin: 0;
+}
+
+*, :before, :after {
+  position: absolute;
+  content: '';
+  box-sizing: border-box;
+}
+
+.boba {
+  font-size: 3vmin;
+  width: 26em;
+  height: 33em;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, 10%);
+}
+
+.capacete {
+  width: 17.5em;
+  height: 8em;
+  top: 6.8em;
+  left: 4.25em;
+  background: $green;
+  border-top-left-radius: 45% 100%;
+  border-top-right-radius: 45% 100%;
+  border-bottom-right-radius: 0% 0%;
+  border-bottom-left-radius: 0% 0%;
+  &:before {
+    content: '◀︎▶︎';
+    font-size: 1em;
+    line-height: 1;
+    left: 50%;
+    transform-origin: 50% 100%;
+    transform: translate(-50%) scaleX(1.8) scaleY(.8);
+    bottom: .2em;
+    color: darken($green, 10%);
+  }
+  &:after {
+    width: .4em;
+    height: 2em;
+    background: $gold;
+    right: 2em;
+    bottom: .5em;
+    transform-origin: 0 100%;
+    transform: perspective(50em) rotateY(45deg) rotateX(10deg) skewY(-4deg);
+    box-shadow: .8em 0 0 $gold, 1.6em 0 0 $gold, 2.4em 0 0 $gold
+  }
+  .dent {
+    width: 3.8em;
+    height: 4.4em;
+    background: black;
+    border-radius: 50%;
+    left: 11.3em;
+    top: 1em;
+    transform: rotateX(-40deg);
+    filter: contrast(300);
+    mix-blend-mode: screen;
+    opacity: .6;
+    &:before {
+      width: 1.8em;
+      height: 2.4em;
+      background: white;
+      border-radius: 50%;
+      filter: blur(.2em);
+      left: 1em;
+      top: 1em;
+    }
+    &:after {
+      width: 1em;
+      height: 1em;
+      background: white;
+      border-radius: 50%;
+      top: 1.8em;
+      left: .6em;
+      box-shadow: 0.2em -1.1em 0 -0.2em #fff, -0.3em -0.7em 0 -0.3em #fff;
+      filter: blur(.15em);
+    }
+  }
+}
+.mascara {
+  height: 14.25em;
+  width: 18em;
+  top: 14.75em;
+  left: 4em;
+  overflow: hidden;
+  border-radius: .15em .15em 0 0;
+  transform: perspective(20em) rotateX(10deg);
+  transform-origin: 50% 0;
+  .esquerda, .direita {
+    background: $red;
+    width: 7em;
+    height: 15em;
+    bottom: 0;
+    transform-origin: 100% 100%;
+    transform: skewY(27deg);
+    overflow: hidden;
+  }
+  .esquerda {
+    left: -1px;
+  }
+  .direita {
+    right: -1px;
+    transform-origin: 0 100%;
+    transform: skewY(-27deg);
+  }
+  .bochecha {
+    width: 6.5em;
+    height: 8.5em;
+    background: darken($green,20%);
+    top: 7em;
+    &:before {
+      width: 5.5em;
+      height: 12em;
+      background: $green;
+      top: 1.8em;
+      border-radius: 50%;
+    }
+  }
+  .esquerda .bochecha {
+    border-top-right-radius: 65% 60%;
+    border-top-left-radius: 2em 1.2em;
+    right: .75em;
+    &:before {
+      right: 0;
+      transform-origin: 100% 50%;
+      transform: skewX(-4deg);
+    }
+    &:after {
+      width: .75em;
+      height: .75em;
+      background: #888;
+      border-radius: 50%;
+      right: .7em;
+      top: 4.8em;
+    }
+  }
+  .direita .bochecha {
+    border-top-left-radius: 65% 60%;
+    border-top-right-radius: 2em 1.2em;
+    left: .75em;
+    &:before {
+      left: 0;
+      transform-origin: 0 50%;
+      transform: skewX(4deg);
+    }
+  }
+  .visor {
+    background: #000;
+    background: linear-gradient(130deg, black 19.5%, #333 20.3%, #333 29.6%, black 30.5%, black 50%, #333 50.3%, #333 29.6%, black 30.5%, black 50%, #333 50.3%, #333 54%, black 54.3%, black 56%, #333 56.3%, #333 57%, black 57.3%);
+    width: 5.5em;
+    height: 14.2em;
+    left: 6.25em;
+    border-color: $red;
+    border-style: solid;
+    border-top-width: 1.5em;
+    border-left-width: .75em;
+    border-right-width: .75em;
+    border-bottom-width: 0;
+    border-bottom-left-radius: 0.8em 0.3em;
+    border-bottom-right-radius: 0.8em 0.3em;
+    .eyeslit {
+      width: 22em;
+      height: 9em;
+      background: #000;
+      background: linear-gradient(130deg, black 61%, #333 61%, #333 66.1%, black 66.1%);
+      top: -7.25em;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 50%;
+      &:before {
+        width: 38em;
+        height: 9em;
+        background: $red;
+        bottom: 1.8em;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 50%;
+      }
+      &:after {
+        width: 38em;
+        height: 6em;
+        background: $green;
+        bottom: 2.9em;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 50%;
+      }
+    }
+    &:before, &:after {
+      width: 2em;
+      height: 2em;
+      background: $green;
+      z-index: 1;
+      transform: skewX(14deg);
+      left: -8.4em;
+      top: -1em;
+    }
+    &:after {
+      transform: skewX(-14deg);
+      right: -8.4em;
+      left: auto;
+    }
+  }
+}
+
+.orelha-direita {
+  width: .7em;
+  height: 10.4em;
+  background: darken($green,10%);
+  background: linear-gradient(to bottom, silver 23%, darken($green, 10%) 23%);
+  right: 2.5em;
+  top: 15em;
+  transform-origin: 0 100%;
+  transform: rotate(-4.4deg);
+  border-top-right-radius: 100% 2em;
+  &:before {
+    border-top: .5em solid $green;
+    border-left: .35em solid $green;
+    border-right: .35em solid transparent;
+    border-bottom: .5em solid transparent;
+    bottom: -1em;
+  }
+  &:after {
+    width: .2em;
+    height: 10.6em;
+    top: -.2em;
+    background: $green;
+    border-top-right-radius: .2em;
+  }
+}
+.orelha-esquerda {
+  width: 1em;
+  background: darken($gold,15%);
+  height: 10.4em;
+  left: 2.2em;
+  top: 15em;
+  transform-origin: 100% 100%;
+  transform: rotate(4.4deg);
+  &:before {
+    border-top: .5em soldi $gold;
+    border-left: .5em solid transparent;
+    border-right: .5em solid $gold;
+    border-bottom: .5em solid transparent;
+    bottom: -1em;
+  }
+  &:after {
+    width: .2em;
+    height: 10.6em;
+    top: 0;
+    right: 0;
+    background: $gold;
+  }
+  .escopo {
+    width: 2em;
+    height: 5.5em;
+    top: -2em;
+    z-index: 1;
+    transform-origin: 0 100%;
+    transform: rotate(-2deg);
+    background: $gold;
+    border-top-left-radius: .3em;
+    &:after {
+      width: 2em;
+      height: 2.5em;
+      background: silver;
+      top: 4.8em;
+      transform-origin: 0 0;
+      transform: rotate(2.4deg);
+    }
+    .montagem {
+      width: .55em;
+      height: 4.65em;
+      left: -.5em;
+      top: .4em;
+      background: darken($gold, 15%);
+      border-top-left-radius: .5em 2em;
+      border-bottom: .5em solid $gold;
+      &:after {
+        border: .6em solid transparent;
+        border-top-color: silver;
+        border-left-color: silver;
+        bottom: -1.45em;
+        z-index: 1;
+      }
+    }
+    .post {
+      width: .5em;
+      height: 12em;
+      background: silver;
+      bottom: 2.5em;
+      left: .5em;
+      .olho {
+        width: 2em;
+        height: 2em;
+        background: black;
+        top: -1.8em;
+        left: -.15em;
+        transform-origin: 0 100%;
+        transform: rotate(5deg);
+        &:before {
+          left: -.78em;
+          border-top: .4em solid transparent;
+          border-right: .8em solid black;
+          border-bottom: 1.6em solid transparent;
+        }
+        &:after {
+          width: 1.6em;
+          height: 0.3em;
+          background: #777;
+          left: 1.9em;
+          top: 1.4em;
+        }
+        span {
+          width: 4em;
+          height: 2em;
+          left: .6em;
+          overflow: hidden;
+          &:before {
+            width: 4.5em;
+            height: 4.5em;
+            border-radius: 50%;
+            background: silver;
+            bottom: 0.5em;
+            right: -.25em;
+          }
+          &:after {
+            width: 20em;
+            height: 20em;
+            border-radius: 50%;
+            left: -5em;
+            top: .6em;
+            box-shadow: 0 0 0 2em black;
+          }
+          
+        }
+      }
+    }
+  }
+}
+
+
